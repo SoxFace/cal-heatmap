@@ -38,9 +38,9 @@ var CalHeatMap = function() {
 
 		domainMargin: [0, 0, 0, 0],
 
-		domain: "month",
+		domain: "day",
 
-		subDomain: "x_day",
+		subDomain: "min",
 
 		// Number of columns to split the subDomains to
 		// If not null, will takes precedence over rowLimit

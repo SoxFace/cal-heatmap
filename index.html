@@ -10,10 +10,20 @@
 </head>
 <body>
 
-<div id="cal-heatmap"></div>
+<h3>A) Basic Example</h3>
+<div id="example-a"></div>
+<h3>B) Month > Day</h3>
 <div id="example-b"></div>
+<h3>D) Year > Day view</h3>
+<div id="example-d"></div>
 
 <script type="text/javascript">
+
+  var cal = new CalHeatMap();
+  cal.init({
+    itemSelector: "#example-a"
+  });
+
   var cal = new CalHeatMap();
   cal.init({
     itemSelector: "#example-b",
@@ -26,6 +36,18 @@
     nextSelector: "#example-b-NextDomain-selector",
 
     legend: [2, 4, 6, 8]
+  });
+
+  var cal = new CalHeatMap();
+  cal.init({
+    itemSelector: "#example-d",
+    domain: "year",
+    subDomain: "day",
+    data: "/cal-heatmap-master/test/data/datas-years.json",
+    start: new Date(2000, 0),
+    cellSize: 10,
+    range: 1,
+    legend: [20, 40, 60, 80]
   });
 </script>
 
