@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cal Heatmap</title>
+  <script type="text/javascript" src="//d3js.org/d3.v3.min.js"></script>
+  <script type="text/javascript" src="cal-heatmap-master/src/cal-heatmap.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/cal-heatmap/3.3.10/cal-heatmap.css" />
+
+</head>
+<body>
+
+<div id="cal-heatmap"></div>
+<div id="example-b"></div>
+
+<script type="text/javascript">
+  var cal = new CalHeatMap();
+  cal.init({
+    itemSelector: "#example-b",
+    domain: "day",
+    data: "/cal-heatmap-master/test/data/datas-years.json",
+    start: new Date(2015, 6),
+    cellSize: 9,
+    range: 15,
+    previousSelector: "#example-b-PreviousDomain-selector",
+    nextSelector: "#example-b-NextDomain-selector",
+
+    legend: [2, 4, 6, 8]
+  });
+</script>
+
+</body>
+</html>
